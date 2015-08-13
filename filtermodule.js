@@ -4,7 +4,7 @@ module.exports=function (directoryName, extension, callback){
     var filterValue = extension;
     var directoryString = fs.readdir(directoryName, function(err, directoryString){
         if (err) {
-            callback(err);
+            return callback(err);
         }
         var directoryArray = directoryString;
         var filteredArray = directoryArray.filter(function(directoryArray){
